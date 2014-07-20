@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_Yc7qEA9TEeSaBIool7Pvpw" name="model">
+  <packagedElement xmi:type="uml:Package" xmi:id="_dBfKoA9kEeSaBIool7Pvpw" name="Calculator">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_w3oeYA9TEeSaBIool7Pvpw" clientDependency="_756lcA9mEeSaBIool7Pvpw" name="Screen"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_zuK98A9kEeSaBIool7Pvpw" name="Buttons">
+      <extend xmi:type="uml:Extend" xmi:id="_vgHhwA9nEeSaBIool7Pvpw" extendedCase="_Tl1oMA9nEeSaBIool7Pvpw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_qU_LkA9lEeSaBIool7Pvpw" clientDependency="_gyu8wA9mEeSaBIool7Pvpw _7ou5YA9nEeSaBIool7Pvpw" name="Compute"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_wkCHwA9lEeSaBIool7Pvpw" name="watch" memberEnd="_wkCHwQ9lEeSaBIool7Pvpw _wkCHxA9lEeSaBIool7Pvpw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wkCHwQ9lEeSaBIool7Pvpw" name="screen" type="_w3oeYA9TEeSaBIool7Pvpw" association="_wkCHwA9lEeSaBIool7Pvpw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wkCHwg9lEeSaBIool7Pvpw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wkCHww9lEeSaBIool7Pvpw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wkCHxA9lEeSaBIool7Pvpw" name="actor" type="_9GNEUA9kEeSaBIool7Pvpw" association="_wkCHwA9lEeSaBIool7Pvpw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wkCHxQ9lEeSaBIool7Pvpw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wkCHxg9lEeSaBIool7Pvpw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_S2TeIA9mEeSaBIool7Pvpw" clientDependency="_Vxk8cA9mEeSaBIool7Pvpw" name="Log"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Vxk8cA9mEeSaBIool7Pvpw" name="listen" client="_S2TeIA9mEeSaBIool7Pvpw" supplier="_zuK98A9kEeSaBIool7Pvpw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_gyu8wA9mEeSaBIool7Pvpw" name="computes" client="_qU_LkA9lEeSaBIool7Pvpw" supplier="_S2TeIA9mEeSaBIool7Pvpw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_756lcA9mEeSaBIool7Pvpw" name="show result" client="_w3oeYA9TEeSaBIool7Pvpw" supplier="_qU_LkA9lEeSaBIool7Pvpw"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Tl1oMA9nEeSaBIool7Pvpw" name="Calculate "/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_7ou5YA9nEeSaBIool7Pvpw" name="listen for order" client="_qU_LkA9lEeSaBIool7Pvpw" supplier="_Tl1oMA9nEeSaBIool7Pvpw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_9GNEUA9kEeSaBIool7Pvpw" clientDependency="_p4Gl0A9mEeSaBIool7Pvpw" name="Actor"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_p4Gl0A9mEeSaBIool7Pvpw" name="interact" client="_9GNEUA9kEeSaBIool7Pvpw" supplier="_zuK98A9kEeSaBIool7Pvpw"/>
+</uml:Model>
