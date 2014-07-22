@@ -106,4 +106,12 @@ public class DownloadAgentGUI extends JFrame {
 		});
 		agent.execute();
 	}
+	
+	/**
+	 * Starts the GUI.
+	 * @param args
+	 */
+	public static void main(String[] args){
+		new DownloadAgentGUI();
+	}
 }
