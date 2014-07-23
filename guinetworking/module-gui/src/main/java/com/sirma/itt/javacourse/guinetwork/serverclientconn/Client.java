@@ -34,7 +34,7 @@ public class Client {
 	 *             If no running servers were found.
 	 */
 	private Socket findServer() throws IOException {
-		for (int i = 7000; i < 7020; i++) {
+		for (int i = 7000; i <= 7020; i++) {
 			try {
 				return new Socket("localhost", i);
 			} catch (UnknownHostException e) {

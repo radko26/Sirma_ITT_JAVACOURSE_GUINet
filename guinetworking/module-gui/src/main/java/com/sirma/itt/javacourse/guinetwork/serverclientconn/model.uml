@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_uOKPYBJAEeS6vNULDtnG3A" name="model">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_uSsxIBJAEeS6vNULDtnG3A" name="Server-Client">
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0DHB0BJGEeS6vNULDtnG3A" name="MessageSend2" covered="_49_c4BJFEeS6vNULDtnG3A" message="_0DFzsBJGEeS6vNULDtnG3A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_u63VoBJGEeS6vNULDtnG3A" name="MessageSend1" covered="_q-_ycBJFEeS6vNULDtnG3A" message="_u62ukBJGEeS6vNULDtnG3A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0DIP8BJGEeS6vNULDtnG3A" name="MessageRecv2" covered="_zdv84BJEEeS6vNULDtnG3A" message="_0DFzsBJGEeS6vNULDtnG3A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_u638sBJGEeS6vNULDtnG3A" name="MessageRecv1" covered="_PZq8kBJCEeS6vNULDtnG3A" message="_u62ukBJGEeS6vNULDtnG3A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ntIjoBJGEeS6vNULDtnG3A" name="MessageSend0" covered="_49_c4BJFEeS6vNULDtnG3A" message="_ntHVgBJGEeS6vNULDtnG3A"/>
+    <fragment xmi:type="uml:PartDecomposition" xmi:id="_1U2BYBJEEeS6vNULDtnG3A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ntJKsBJGEeS6vNULDtnG3A" name="MessageRecv0" covered="_q-_ycBJFEeS6vNULDtnG3A" message="_ntHVgBJGEeS6vNULDtnG3A"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_PZq8kBJCEeS6vNULDtnG3A" name="ClientGUI" decomposedAs="_1U2BYBJEEeS6vNULDtnG3A" coveredBy="_u638sBJGEeS6vNULDtnG3A">
+      <selector xmi:type="uml:Interval" xmi:id="_2gfVIBJEEeS6vNULDtnG3A" name="e"/>
+    </lifeline>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_zdv84BJEEeS6vNULDtnG3A" name="ServerGUI" coveredBy="_0DIP8BJGEeS6vNULDtnG3A"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_q-_ycBJFEeS6vNULDtnG3A" name="Client conn" coveredBy="_ntJKsBJGEeS6vNULDtnG3A _u63VoBJGEeS6vNULDtnG3A"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_49_c4BJFEeS6vNULDtnG3A" name="Server conn" coveredBy="_ntIjoBJGEeS6vNULDtnG3A _0DHB0BJGEeS6vNULDtnG3A"/>
+    <message xmi:type="uml:Message" xmi:id="_ntHVgBJGEeS6vNULDtnG3A" name="WelcomeMessage" messageSort="asynchCall" receiveEvent="_ntJKsBJGEeS6vNULDtnG3A" sendEvent="_ntIjoBJGEeS6vNULDtnG3A"/>
+    <message xmi:type="uml:Message" xmi:id="_u62ukBJGEeS6vNULDtnG3A" name="DisplayMessage" messageSort="asynchCall" receiveEvent="_u638sBJGEeS6vNULDtnG3A" sendEvent="_u63VoBJGEeS6vNULDtnG3A"/>
+    <message xmi:type="uml:Message" xmi:id="_0DFzsBJGEeS6vNULDtnG3A" name="DisplayOperations" messageSort="asynchCall" receiveEvent="_0DIP8BJGEeS6vNULDtnG3A" sendEvent="_0DHB0BJGEeS6vNULDtnG3A"/>
+  </packagedElement>
+</uml:Model>

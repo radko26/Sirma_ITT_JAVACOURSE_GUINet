@@ -31,7 +31,5 @@ public class Calculator {
 				window.setVisible(true);	
 			}
 		});
-	
 	}
-
 }

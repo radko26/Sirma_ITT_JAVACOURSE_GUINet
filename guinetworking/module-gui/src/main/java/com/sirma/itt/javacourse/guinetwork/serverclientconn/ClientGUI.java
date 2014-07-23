@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 /**
  * Graphical interface to {@link Client}.
@@ -16,6 +17,9 @@ import javax.swing.JTextArea;
 public class ClientGUI extends JFrame{
 	private static final Point POINT_CENTER = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
 	private static JTextArea logField = new JTextArea();
+	private JScrollPane scroll = new JScrollPane(logField,
+			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+			JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 	private static JPanel panel = new JPanel();
 	
 	/**
@@ -29,7 +33,7 @@ public class ClientGUI extends JFrame{
 
 		panel.setSize(500, 500);
 		panel.setVisible(true);
-		panel.add(logField);
+		panel.add(scroll);
 
 		
 		setContentPane(panel);

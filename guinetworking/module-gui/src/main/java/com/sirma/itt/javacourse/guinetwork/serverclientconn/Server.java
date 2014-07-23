@@ -40,22 +40,31 @@ public class Server {
 	 *             In case of event that interrupts the listening process.
 	 */
 	public void listen() throws IOException {
-		try {
-			client = server.accept();
-		} catch (IOException e) {
-			System.exit(0);
+		try{
+			while(true){
+				try {
+					client = server.accept();
+				} catch (IOException e) {
+					System.exit(0);
+				}
+				logField.append("\n Client with id " + client.getInetAddress());
+				try{
+					PrintWriter serverToClient = new PrintWriter(client.getOutputStream());
+					serverToClient.println("Hello!" + System.currentTimeMillis());
+					logField.append("\n Message sent to client:" + client.getInetAddress());
+					serverToClient.close();
+				}
+				finally{
+					client.close();
+				}
+				if (client.isClosed()) {
+					logField.append("\n Client with ip<" + client.getInetAddress()
+							+ "> disconnected.");
+				}
+			}
 		}
-		logField.append("\n Client with id " + client.getInetAddress());
-
-		PrintWriter serverToClient = new PrintWriter(client.getOutputStream());
-		serverToClient.println("Hello!" + System.currentTimeMillis());
-		logField.append("\n Message sent to client:" + client.getInetAddress());
-		serverToClient.close();
-		if (client.isClosed()) {
-			logField.append("\n Client with ip<" + client.getInetAddress()
-					+ "> disconnected.");
-		}
-		close();
+		finally{close();}
+		
 	}
 
 	/**
@@ -67,7 +76,7 @@ public class Server {
 	 *             If no available port was found.
 	 */
 	private ServerSocket create() throws IOException {
-		for (int i = 7000; i < 7020; i++) {
+		for (int i = 7000; i <= 7020; i++) {
 			try {
 				return new ServerSocket(i);
 			} catch (IOException e) {
