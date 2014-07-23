@@ -1,28 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_Yc7qEA9TEeSaBIool7Pvpw" name="model">
-  <packagedElement xmi:type="uml:Package" xmi:id="_dBfKoA9kEeSaBIool7Pvpw" name="Calculator">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_w3oeYA9TEeSaBIool7Pvpw" clientDependency="_756lcA9mEeSaBIool7Pvpw" name="Screen"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_zuK98A9kEeSaBIool7Pvpw" name="Buttons">
-      <extend xmi:type="uml:Extend" xmi:id="_vgHhwA9nEeSaBIool7Pvpw" extendedCase="_Tl1oMA9nEeSaBIool7Pvpw"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_l0EQwBJoEeS6vNULDtnG3A" name="Calculator">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_9uXRQBJpEeS6vNULDtnG3A" name="GUI">
+      <include xmi:type="uml:Include" xmi:id="_oyFZsBJrEeS6vNULDtnG3A" addition="_kJBZUBJqEeS6vNULDtnG3A"/>
+      <include xmi:type="uml:Include" xmi:id="_pHjTYBJrEeS6vNULDtnG3A" addition="_QdB6YBJrEeS6vNULDtnG3A"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_qU_LkA9lEeSaBIool7Pvpw" clientDependency="_gyu8wA9mEeSaBIool7Pvpw _7ou5YA9nEeSaBIool7Pvpw" name="Compute"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_wkCHwA9lEeSaBIool7Pvpw" name="watch" memberEnd="_wkCHwQ9lEeSaBIool7Pvpw _wkCHxA9lEeSaBIool7Pvpw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_wkCHwQ9lEeSaBIool7Pvpw" name="screen" type="_w3oeYA9TEeSaBIool7Pvpw" association="_wkCHwA9lEeSaBIool7Pvpw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wkCHwg9lEeSaBIool7Pvpw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wkCHww9lEeSaBIool7Pvpw" value="1"/>
-      </ownedEnd>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_wkCHxA9lEeSaBIool7Pvpw" name="actor" type="_9GNEUA9kEeSaBIool7Pvpw" association="_wkCHwA9lEeSaBIool7Pvpw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wkCHxQ9lEeSaBIool7Pvpw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wkCHxg9lEeSaBIool7Pvpw" value="1"/>
-      </ownedEnd>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ZBXIYBJqEeS6vNULDtnG3A" name="NumericButtons">
+      <extend xmi:type="uml:Extend" xmi:id="_sNiz8BJrEeS6vNULDtnG3A" extendedCase="_QdB6YBJrEeS6vNULDtnG3A" extensionLocation="_sNtzEBJrEeS6vNULDtnG3A"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_S2TeIA9mEeSaBIool7Pvpw" clientDependency="_Vxk8cA9mEeSaBIool7Pvpw" name="Log"/>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_Vxk8cA9mEeSaBIool7Pvpw" name="listen" client="_S2TeIA9mEeSaBIool7Pvpw" supplier="_zuK98A9kEeSaBIool7Pvpw"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_gyu8wA9mEeSaBIool7Pvpw" name="computes" client="_qU_LkA9lEeSaBIool7Pvpw" supplier="_S2TeIA9mEeSaBIool7Pvpw"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_756lcA9mEeSaBIool7Pvpw" name="show result" client="_w3oeYA9TEeSaBIool7Pvpw" supplier="_qU_LkA9lEeSaBIool7Pvpw"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Tl1oMA9nEeSaBIool7Pvpw" name="Calculate "/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_7ou5YA9nEeSaBIool7Pvpw" name="listen for order" client="_qU_LkA9lEeSaBIool7Pvpw" supplier="_Tl1oMA9nEeSaBIool7Pvpw"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ZXo6YBJqEeS6vNULDtnG3A" name="OperationButtons">
+      <extend xmi:type="uml:Extend" xmi:id="_sl5pkBJrEeS6vNULDtnG3A" extendedCase="_QdB6YBJrEeS6vNULDtnG3A" extensionLocation="_sNtzEBJrEeS6vNULDtnG3A"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_BRiVsBJtEeS6vNULDtnG3A" name="point"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ZouqYBJqEeS6vNULDtnG3A" name="OtherButtons">
+      <extend xmi:type="uml:Extend" xmi:id="_2HetgBJrEeS6vNULDtnG3A" extendedCase="_QdB6YBJrEeS6vNULDtnG3A" extensionLocation="_sNtzEBJrEeS6vNULDtnG3A"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_grFgkBJvEeS6vNULDtnG3A" name="point"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_kJBZUBJqEeS6vNULDtnG3A" name="Display"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_QdB6YBJrEeS6vNULDtnG3A" name="Buttons">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_sNtzEBJrEeS6vNULDtnG3A" name="point"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_4tY_0BJrEeS6vNULDtnG3A" name="Addition">
+      <extend xmi:type="uml:Extend" xmi:id="_C5Lo8BJtEeS6vNULDtnG3A" extendedCase="_ZXo6YBJqEeS6vNULDtnG3A" extensionLocation="_BRiVsBJtEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_48Wo4BJrEeS6vNULDtnG3A" name="Multiplication">
+      <extend xmi:type="uml:Extend" xmi:id="_IyJncBJtEeS6vNULDtnG3A" extendedCase="_ZXo6YBJqEeS6vNULDtnG3A" extensionLocation="_BRiVsBJtEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_5RMQcBJrEeS6vNULDtnG3A" name="Substract">
+      <extend xmi:type="uml:Extend" xmi:id="_BRSeEBJtEeS6vNULDtnG3A" extendedCase="_ZXo6YBJqEeS6vNULDtnG3A" extensionLocation="_BRiVsBJtEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_hZUm8BJsEeS6vNULDtnG3A" name="Division">
+      <extend xmi:type="uml:Extend" xmi:id="_JnWKEBJtEeS6vNULDtnG3A" extendedCase="_ZXo6YBJqEeS6vNULDtnG3A" extensionLocation="_BRiVsBJtEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_dWTWEBJvEeS6vNULDtnG3A" name="Result">
+      <extend xmi:type="uml:Extend" xmi:id="_gq7vkBJvEeS6vNULDtnG3A" extendedCase="_ZouqYBJqEeS6vNULDtnG3A" extensionLocation="_grFgkBJvEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_m1hCgBJvEeS6vNULDtnG3A" name="EraseLastChar">
+      <extend xmi:type="uml:Extend" xmi:id="_6X_joBJvEeS6vNULDtnG3A" extendedCase="_ZouqYBJqEeS6vNULDtnG3A" extensionLocation="_grFgkBJvEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_x0B-gBJvEeS6vNULDtnG3A" name="Erase all">
+      <extend xmi:type="uml:Extend" xmi:id="_7MtlIBJvEeS6vNULDtnG3A" extendedCase="_ZouqYBJqEeS6vNULDtnG3A" extensionLocation="_grFgkBJvEeS6vNULDtnG3A"/>
+    </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_9GNEUA9kEeSaBIool7Pvpw" clientDependency="_p4Gl0A9mEeSaBIool7Pvpw" name="Actor"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_p4Gl0A9mEeSaBIool7Pvpw" name="interact" client="_9GNEUA9kEeSaBIool7Pvpw" supplier="_zuK98A9kEeSaBIool7Pvpw"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_1Z6u0BJpEeS6vNULDtnG3A" name="User"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RhBG8BJrEeS6vNULDtnG3A" name="A_user_gui" memberEnd="_RhBG8RJrEeS6vNULDtnG3A _RhBG9BJrEeS6vNULDtnG3A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RhBG8RJrEeS6vNULDtnG3A" name="user" type="_1Z6u0BJpEeS6vNULDtnG3A" association="_RhBG8BJrEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RhBG8hJrEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RhBG8xJrEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RhBG9BJrEeS6vNULDtnG3A" name="gui" type="_9uXRQBJpEeS6vNULDtnG3A" association="_RhBG8BJrEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RhBG9RJrEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RhBG9hJrEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
