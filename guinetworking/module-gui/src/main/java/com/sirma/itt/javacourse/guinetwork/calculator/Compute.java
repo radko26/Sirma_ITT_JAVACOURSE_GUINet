@@ -41,32 +41,41 @@ public class Compute {
 		Queue<String> outputQueue = new LinkedList<String>();
 
 		for (String token : input) {
-
 			if (!OPERATORS.containsKey(token) && !token.contentEquals("(")
 					&& !token.contentEquals(")")) {
-				outputQueue.add(token);
+				if (token.contentEquals("")) {
+					throw new IllegalArgumentException("Error");
+				} else {
+					outputQueue.add(token);
+				}
 			} else if (OPERATORS.containsKey(token)) {
 				while (!operatorStack.isEmpty()
 						&& OPERATORS.containsKey(operatorStack.peek())
 						&& OPERATORS.get(operatorStack.peek()) >= OPERATORS
-								.get(token)) {//while operator a1 < a2 (which is from the stack)
+								.get(token)) {// while operator a1 < a2 (which
+												// is from the stack)
 					outputQueue.add(operatorStack.pop());
 				}
 				operatorStack.push(token);
 			} else if (token.contentEquals("(")) {
 				operatorStack.push(token);
 			} else if (token.contentEquals(")")) {
+				if (operatorStack.isEmpty()) {
+					throw new IllegalArgumentException("Error");
+				}
 				while (!operatorStack.peek().contentEquals("(")) {
 					outputQueue.add(operatorStack.pop());
 					if (operatorStack.isEmpty()) {
 						throw new IllegalArgumentException("Error");
 					}
+
 				}
 				operatorStack.pop();
 			}
 		}
 		while (!operatorStack.isEmpty()) {
-			if (operatorStack.peek().contentEquals("(")) {
+			if (operatorStack.peek().contentEquals("(")
+					|| operatorStack.peek().contentEquals(")")) {
 				throw new IllegalArgumentException("Error");
 			} else {
 				outputQueue.add(operatorStack.pop());
@@ -85,8 +94,8 @@ public class Compute {
 	 * @return The result.
 	 */
 	public static String compute(String input) {
-
-		String[] parsed = parse(input).toArray(new String[0]);
+		String[] parsed = null;
+		parsed = parse(input).toArray(new String[0]);
 		Stack<String> operandStack = new Stack<String>();
 
 		BigDecimal num1 = new BigDecimal("0");
@@ -126,10 +135,9 @@ public class Compute {
 				}
 			}
 		}
-		if (operandStack.size() > 1) {
+		if (operandStack.size() > 1 || operandStack.size() < 1) {
 			throw new IllegalArgumentException("Error");
 		}
 		return operandStack.pop();
 	}
-
 }

@@ -40,31 +40,27 @@ public class Server {
 	 *             In case of event that interrupts the listening process.
 	 */
 	public void listen() throws IOException {
-		try{
-			while(true){
-				try {
-					client = server.accept();
-				} catch (IOException e) {
-					System.exit(0);
-				}
-				logField.append("\n Client with id " + client.getInetAddress());
-				try{
-					PrintWriter serverToClient = new PrintWriter(client.getOutputStream());
-					serverToClient.println("Hello!" + System.currentTimeMillis());
-					logField.append("\n Message sent to client:" + client.getInetAddress());
-					serverToClient.close();
-				}
-				finally{
-					client.close();
-				}
-				if (client.isClosed()) {
-					logField.append("\n Client with ip<" + client.getInetAddress()
-							+ "> disconnected.");
-				}
+		while (true) {
+			try {
+				client = server.accept();
+			} catch (IOException e) {
+				close();
+				System.exit(0);
 			}
-		}
-		finally{close();}
-		
+			logField.append("\n Client with id " + client.getInetAddress());
+			try {
+				PrintWriter serverToClient = new PrintWriter(
+						client.getOutputStream());
+				serverToClient.println("Hello!" + System.currentTimeMillis());
+				logField.append("\n Message sent to client:"
+						+ client.getInetAddress());
+				serverToClient.close();
+			} finally {
+				client.close();
+			}
+			logField.append("\n Client with ip<" + client.getInetAddress()
+					+ "> disconnected.");
+		}// TODO try{}finally{} and System.exit(0)
 	}
 
 	/**

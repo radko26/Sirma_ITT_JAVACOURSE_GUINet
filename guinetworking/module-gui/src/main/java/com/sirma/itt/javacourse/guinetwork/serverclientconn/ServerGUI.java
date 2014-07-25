@@ -30,7 +30,6 @@ public class ServerGUI extends JFrame implements ActionListener {
 			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
 			JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 	private Server server;
-	
 
 	/**
 	 * Initialises the GUI and starts the server.
@@ -38,7 +37,7 @@ public class ServerGUI extends JFrame implements ActionListener {
 	 * @throws IOException
 	 * 
 	 */
-	public ServerGUI(){
+	public ServerGUI() {
 		super("Server");
 		logField.setVisible(true);
 		logField.setEnabled(false);
@@ -63,7 +62,7 @@ public class ServerGUI extends JFrame implements ActionListener {
 			server = new Server(logField);
 			server.listen();
 		} catch (IOException e1) {
-			logField.append("\n" + e1.getMessage() );
+			logField.append("\n" + e1.getMessage());
 		}
 	}
 
@@ -73,12 +72,12 @@ public class ServerGUI extends JFrame implements ActionListener {
 		System.exit(0);
 	}
 
-	
 	/**
 	 * Starts the server.
+	 * 
 	 * @param args
 	 */
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		new ServerGUI();
 	}
 }

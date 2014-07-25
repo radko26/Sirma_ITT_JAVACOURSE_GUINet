@@ -9,23 +9,25 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+
 /**
  * Graphical interface to {@link Client}.
  * 
  * @author radoslav
  */
-public class ClientGUI extends JFrame{
-	private static final Point POINT_CENTER = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
+public class ClientGUI extends JFrame {
+	private static final Point POINT_CENTER = GraphicsEnvironment
+			.getLocalGraphicsEnvironment().getCenterPoint();
 	private static JTextArea logField = new JTextArea();
 	private JScrollPane scroll = new JScrollPane(logField,
 			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
 			JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 	private static JPanel panel = new JPanel();
-	
+
 	/**
 	 * Initialises all components.
 	 */
-	public ClientGUI(){
+	public ClientGUI() {
 		super("Client");
 		logField.setVisible(true);
 		logField.setPreferredSize(new Dimension(500, 100));
@@ -35,15 +37,16 @@ public class ClientGUI extends JFrame{
 		panel.setVisible(true);
 		panel.add(scroll);
 
-		
 		setContentPane(panel);
 		pack();
-		setBounds(POINT_CENTER.x - getWidth()/2,POINT_CENTER.y - getHeight()/2, getWidth(),getHeight());
+		setBounds(POINT_CENTER.x - getWidth() / 2, POINT_CENTER.y - getHeight()
+				/ 2, getWidth(), getHeight());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		connect();
-		
+
 	}
+
 	/**
 	 * Unites {@link Client} and {@link ClientGUI}.
 	 */
@@ -53,16 +56,16 @@ public class ClientGUI extends JFrame{
 		} catch (IOException e) {
 			logField.setText(e.getMessage());
 		}
-		
+
 	}
 
 	/**
 	 * Starts the client.
+	 * 
 	 * @param args
 	 */
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		new ClientGUI();
 	}
-	
 
 }

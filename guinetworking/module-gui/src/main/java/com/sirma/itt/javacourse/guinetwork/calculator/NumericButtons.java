@@ -33,8 +33,7 @@ public class NumericButtons {
 				button.setEnabled(false);
 			} else if (i == 0) {
 				button.setText("0");
-			} 
-			else {
+			} else {
 				button.setText(Integer.toString(i - 1));
 			}
 			button.setVisible(true);

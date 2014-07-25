@@ -7,6 +7,9 @@ import java.util.Scanner;
 
 import javax.swing.JTextArea;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Searches for running server with port between 7000 and 7020 and connects to
  * it. Receives its message and closes.
@@ -15,7 +18,8 @@ import javax.swing.JTextArea;
  */
 public class Client {
 
-	private static JTextArea logField;
+	private JTextArea logField;
+	private static final Logger LOG = LoggerFactory.getLogger(Client.class);
 
 	/**
 	 * Initialises the GUI field where it writes down its operations.
@@ -38,7 +42,7 @@ public class Client {
 			try {
 				return new Socket("localhost", i);
 			} catch (UnknownHostException e) {
-				System.out.println("wrong host name");
+				throw new UnknownHostException("Unknown hostname");
 			} catch (IOException e) {
 				continue;
 			}
@@ -58,11 +62,11 @@ public class Client {
 				+ ":" + server.getLocalPort());
 
 		logField.append("\nReading from server's input stream");
-		Scanner scan = new Scanner(server.getInputStream());
+		Scanner inputFromServer = new Scanner(server.getInputStream());
 
 		logField.append("\nWriting to the console");
-		System.out.println(scan.nextLine());
-
+		LOG.info(inputFromServer.nextLine());
+		inputFromServer.close();
 		server.close();
 		logField.append("\nClosing client..");
 		try {

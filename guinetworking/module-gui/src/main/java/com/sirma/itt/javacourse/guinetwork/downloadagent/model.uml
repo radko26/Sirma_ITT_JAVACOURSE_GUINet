@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_rH6Z4BJxEeS6vNULDtnG3A" name="model">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_rH7oABJxEeS6vNULDtnG3A" name="d" node="_4r3KcBKaEeS6vNULDtnG3A _BZsgcBKfEeS6vNULDtnG3A _ByLR4BKfEeS6vNULDtnG3A _B-nLYBKfEeS6vNULDtnG3A _CJciYBKfEeS6vNULDtnG3A _X6udYBKfEeS6vNULDtnG3A _6VfBYBKfEeS6vNULDtnG3A _OQ0ucBKgEeS6vNULDtnG3A">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yLolYBKfEeS6vNULDtnG3A" name="" source="_4r3KcBKaEeS6vNULDtnG3A" target="_ByLR4BKfEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__lvaEBKfEeS6vNULDtnG3A" name="" source="_X6udYBKfEeS6vNULDtnG3A" target="_6VfBYBKfEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_A6C6kBKgEeS6vNULDtnG3A" name="" source="_6VfBYBKfEeS6vNULDtnG3A" target="_B-nLYBKfEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Qvr9kBKgEeS6vNULDtnG3A" name="" source="_CJciYBKfEeS6vNULDtnG3A" target="_OQ0ucBKgEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ZbPYcBKgEeS6vNULDtnG3A" name="" source="_B-nLYBKfEeS6vNULDtnG3A" target="_OQ0ucBKgEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yhjVkBKgEeS6vNULDtnG3A" name="" source="_OQ0ucBKgEeS6vNULDtnG3A" target="_BZsgcBKfEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_4r3KcBKaEeS6vNULDtnG3A" name="Start" outgoing="_yLolYBKfEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_BZsgcBKfEeS6vNULDtnG3A" name="ActivityFinalNode" incoming="_yhjVkBKgEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ByLR4BKfEeS6vNULDtnG3A" name="Receive URL" incoming="_yLolYBKfEeS6vNULDtnG3A">
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_w8n0kBKfEeS6vNULDtnG3A"/>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_B-nLYBKfEeS6vNULDtnG3A" name="Close Streams" outgoing="_ZbPYcBKgEeS6vNULDtnG3A" incoming="_A6C6kBKgEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_CJciYBKfEeS6vNULDtnG3A" name="Print error" outgoing="_Qvr9kBKgEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_X6udYBKfEeS6vNULDtnG3A" name="Connect to URL" outgoing="__lvaEBKfEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6VfBYBKfEeS6vNULDtnG3A" name="Create file and copy content" outgoing="_A6C6kBKgEeS6vNULDtnG3A" incoming="__lvaEBKfEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_OQ0ucBKgEeS6vNULDtnG3A" name="MergeNode" outgoing="_yhjVkBKgEeS6vNULDtnG3A" incoming="_Qvr9kBKgEeS6vNULDtnG3A _ZbPYcBKgEeS6vNULDtnG3A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_stCkoBJxEeS6vNULDtnG3A" name="DownloadAgent">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_v4gbEBJxEeS6vNULDtnG3A" name="GUI">
+      <include xmi:type="uml:Include" xmi:id="_6BT3EBJxEeS6vNULDtnG3A" addition="_x-AvABJxEeS6vNULDtnG3A"/>
+      <include xmi:type="uml:Include" xmi:id="_6dZWIBJxEeS6vNULDtnG3A" addition="_y0qqMBJxEeS6vNULDtnG3A"/>
+      <include xmi:type="uml:Include" xmi:id="_R8ePsBJyEeS6vNULDtnG3A" addition="_MZ2UoBJyEeS6vNULDtnG3A"/>
+      <include xmi:type="uml:Include" xmi:id="_SZBBwBJyEeS6vNULDtnG3A" addition="_OiVrIBJyEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_x-AvABJxEeS6vNULDtnG3A" name="Enter URL"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_y0qqMBJxEeS6vNULDtnG3A" name="SendButton">
+      <include xmi:type="uml:Include" xmi:id="_pNBkEBJ9EeS6vNULDtnG3A" addition="_--BBoBJxEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_--BBoBJxEeS6vNULDtnG3A" name="SaveDirectory"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_MZ2UoBJyEeS6vNULDtnG3A" name="ProgressBar"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_OiVrIBJyEeS6vNULDtnG3A" name="ViewErrors"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_unLWEBJxEeS6vNULDtnG3A" name="User"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_w7rIQBJxEeS6vNULDtnG3A" name="interact" memberEnd="_w7rIQRJxEeS6vNULDtnG3A _w7rIRBJxEeS6vNULDtnG3A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_w7rIQRJxEeS6vNULDtnG3A" name="user" type="_unLWEBJxEeS6vNULDtnG3A" association="_w7rIQBJxEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w7rIQhJxEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w7rIQxJxEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_w7rIRBJxEeS6vNULDtnG3A" name="gui" type="_v4gbEBJxEeS6vNULDtnG3A" association="_w7rIQBJxEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w7rIRRJxEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w7rIRhJxEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

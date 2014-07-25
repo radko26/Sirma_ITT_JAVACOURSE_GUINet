@@ -1,25 +1,23 @@
-package com.sirma.itt.javacourse.guinetwork.clientinfo;
+package com.sirma.itt.javacourse.guinetwork.reversemsg;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GraphicsEnvironment;
+import java.awt.Insets;
 import java.awt.Point;
 import java.io.IOException;
 
-import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 /**
- * Client GUI using {@link Client} to connect to server.
+ * Graphical user interface using {@link Sever} to launch server.
  * 
  * @author Radoslav
  */
-
-public class ClientGUI extends JFrame {
+public class ServerGUI extends JFrame {
 	private static final Point POINT_CENTER = GraphicsEnvironment
 			.getLocalGraphicsEnvironment().getCenterPoint();
 	private JPanel contentPanel = new JPanel();
@@ -27,22 +25,20 @@ public class ClientGUI extends JFrame {
 	private JScrollPane scroll = new JScrollPane(logField,
 			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
 			JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+	private Server server = new Server(logField);
 
 	/**
 	 * Initialises the GUI.
 	 */
-	public ClientGUI() {
-		super("Client");
-
-		logField.setBorder(BorderFactory.createLineBorder(Color.RED));
+	public ServerGUI() {
+		super("Server");
+		logField.setMargin(new Insets(5, 5, 2, 0));
 		logField.setEnabled(false);
-
-		scroll.setPreferredSize(new Dimension(400, 300));
-
+		scroll.setPreferredSize(new Dimension(300, 300));
 		contentPanel.setLayout(new BorderLayout());
-		contentPanel.setPreferredSize(new Dimension(500, 300));
 
 		contentPanel.add(scroll, BorderLayout.PAGE_START);
+		contentPanel.setPreferredSize(new Dimension(400, 300));
 		contentPanel.setVisible(true);
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -56,20 +52,13 @@ public class ClientGUI extends JFrame {
 	}
 
 	/**
-	 * Connects with the server.
+	 * Starts the server and unites the GUI with the core.
 	 */
 	private void connect() {
 		try {
-			new Client(logField).connect();
+			server.start();
 		} catch (IOException e) {
-			logField.append("\n" + e.getMessage()
-					+ " terminating in 5 seconds..");
-			try {
-				Thread.sleep(10000);
-			} catch (InterruptedException e1) {
-
-			}
-			System.exit(0);
+			System.out.println(e.getMessage());
 		}
 	}
 
@@ -79,7 +68,7 @@ public class ClientGUI extends JFrame {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new ClientGUI();
+		new ServerGUI();
 	}
 
 }

@@ -91,7 +91,6 @@ public class Panel extends JPanel {
 	}
 
 	public void add(MonitorField label) {
-
 		textPanel.add(label.getMonitor());
 	}
 
@@ -109,16 +108,23 @@ public class Panel extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						log = new StringBuilder("");
 						print(log.toString());
+						deleteToken.clear();
 					}
 				});
 			} else if (button.getText().contentEquals("B")) {
 				button.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						log.delete(log.length() - deleteToken.pop(),
-								log.length());// deletes last deleteToken.pop()
-												// characters.
-						print(log.toString());
+						// System.out.println(deleteToken.peek());
+						if (deleteToken.empty()) {
+
+						} else {
+							log.delete(log.length() - deleteToken.pop(),
+									log.length());// deletes last
+													// deleteToken.pop()
+													// characters.
+							print(log.toString());
+						}
 					}
 				});
 			} else if (button.getText().contentEquals("=")) {
@@ -138,19 +144,40 @@ public class Panel extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						if (button.getText().equals("(")) {
-							if (log.charAt(log.length() - 1) <= '9'
-									&& log.charAt(log.length() - 1) >= '0') {
+
+							if (log.length() > 0) {
+								if (log.charAt(log.length() - 1) <= '9'
+										&& log.charAt(log.length() - 1) >= '0') {
+									log.append(" " + button.getText() + " ");
+								} else {
+									log.append(button.getText() + " ");
+									deleteToken.add(2);
+								}
 							} else {
-								log.deleteCharAt(log.length() - 1);
-								deleteToken.pop();
+								log.append(button.getText() + " ");
 								deleteToken.add(2);
 							}
-						}
-						log.append(" " + button.getText() + " ");
-						if (button.getText().equals(")")) {
-							log.deleteCharAt(log.length() - 1);
+						} else if ((button.getText().equals("+") || button
+								.getText().equals("-"))
+								&& deleteToken.isEmpty()) {
+							log.append(button.getText() + " ");
 							deleteToken.add(2);
+						} else if (button.getText().equals(")")) {
+							if (log.length() > 0) {
+								if (log.charAt(log.length() - 1) >= '0'
+										&& log.charAt(log.length() - 1) <= '9') {
+									log.append(" " + button.getText() + " ");
+									deleteToken.add(3);
+								} else {
+									log.append(button.getText() + " ");
+									deleteToken.add(2);
+								}
+							} else {
+								log.append(button.getText() + " ");
+								deleteToken.add(2);
+							}
 						} else {
+							log.append(" " + button.getText() + " ");
 							deleteToken.add(3);
 						}
 						print(log.toString());

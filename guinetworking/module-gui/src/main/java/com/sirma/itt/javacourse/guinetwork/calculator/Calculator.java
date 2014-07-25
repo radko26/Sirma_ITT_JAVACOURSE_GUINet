@@ -15,7 +15,7 @@ public class Calculator {
 
 	public static void main(String[] args) throws InterruptedException {
 		SwingUtilities.invokeLater(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				JFrame window = new JFrame("Calculator");
@@ -23,12 +23,12 @@ public class Calculator {
 				window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				window.setResizable(false);
 				window.pack();
-				Point center = GraphicsEnvironment.getLocalGraphicsEnvironment()
-						.getCenterPoint();
-				window.setBounds(center.x - window.getWidth() / 2,
-						center.y - window.getHeight() / 2, window.getWidth(),
+				Point center = GraphicsEnvironment
+						.getLocalGraphicsEnvironment().getCenterPoint();
+				window.setBounds(center.x - window.getWidth() / 2, center.y
+						- window.getHeight() / 2, window.getWidth(),
 						window.getHeight());
-				window.setVisible(true);	
+				window.setVisible(true);
 			}
 		});
 	}

@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_xCAu8BGvEeS2cLKoESpy3Q" name="model">
-  <packagedElement xmi:type="uml:Activity" xmi:id="_xF6XgBGvEeS2cLKoESpy3Q" name="Server" group="_8eyCUBGxEeS2cLKoESpy3Q _8kgk8BGzEeS2cLKoESpy3Q _-oG0YBGzEeS2cLKoESpy3Q" node="_18nyUBGwEeS2cLKoESpy3Q _jZex0BGxEeS2cLKoESpy3Q _3y4T4BGxEeS2cLKoESpy3Q">
-    <group xmi:type="uml:LoopNode" xmi:id="_8eyCUBGxEeS2cLKoESpy3Q" name="LoopNode" inPartition="_8kgk8BGzEeS2cLKoESpy3Q"/>
-    <group xmi:type="uml:ActivityPartition" xmi:id="_8kgk8BGzEeS2cLKoESpy3Q" name="Server" isExternal="true" node="_18nyUBGwEeS2cLKoESpy3Q _8eyCUBGxEeS2cLKoESpy3Q _3y4T4BGxEeS2cLKoESpy3Q _jZex0BGxEeS2cLKoESpy3Q"/>
-    <group xmi:type="uml:ActivityPartition" xmi:id="_-oG0YBGzEeS2cLKoESpy3Q" name="Client"/>
-    <node xmi:type="uml:InitialNode" xmi:id="_18nyUBGwEeS2cLKoESpy3Q" name="StartGUI" inPartition="_8kgk8BGzEeS2cLKoESpy3Q"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_jZex0BGxEeS2cLKoESpy3Q" name="create GUI" inPartition="_8kgk8BGzEeS2cLKoESpy3Q"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_3y4T4BGxEeS2cLKoESpy3Q" name="startServer" inPartition="_8kgk8BGzEeS2cLKoESpy3Q"/>
-  </packagedElement>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_yk7oMBM5EeS6vNULDtnG3A" name="model">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_yk8PQBM5EeS6vNULDtnG3A" name="Activity1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_yk-EcBM5EeS6vNULDtnG3A" name="Interaction1"/>
 </uml:Model>

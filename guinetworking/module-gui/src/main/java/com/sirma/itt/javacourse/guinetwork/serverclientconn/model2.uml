@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_cAsiUBKhEeS6vNULDtnG3A" name="model">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_cAtwcBKhEeS6vNULDtnG3A" name="Activity1" node="_VPOZEBKiEeS6vNULDtnG3A _Vod_gBKiEeS6vNULDtnG3A _xXTeEBKiEeS6vNULDtnG3A _IQrpkBKjEeS6vNULDtnG3A _IdqVoBKjEeS6vNULDtnG3A _fwvakBKjEeS6vNULDtnG3A _rsYtMBKjEeS6vNULDtnG3A _uIyeMBKjEeS6vNULDtnG3A _1zvXsBKjEeS6vNULDtnG3A _QuhucBM5EeS6vNULDtnG3A _aZ0IABM5EeS6vNULDtnG3A _jllUABM5EeS6vNULDtnG3A">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Bn0CsBKkEeS6vNULDtnG3A" name="" source="_VPOZEBKiEeS6vNULDtnG3A" target="_rsYtMBKjEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_CLrkwBKkEeS6vNULDtnG3A" name="" source="_rsYtMBKjEeS6vNULDtnG3A" target="_aZ0IABM5EeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FBkMwBKkEeS6vNULDtnG3A" name="" source="_uIyeMBKjEeS6vNULDtnG3A" target="_1zvXsBKjEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GqddMBKkEeS6vNULDtnG3A" name="" source="_IQrpkBKjEeS6vNULDtnG3A" target="_IdqVoBKjEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_G-w5QBKkEeS6vNULDtnG3A" name="" source="_IdqVoBKjEeS6vNULDtnG3A" target="_fwvakBKjEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_IRnBMBKkEeS6vNULDtnG3A" name="" source="_xXTeEBKiEeS6vNULDtnG3A" target="_IQrpkBKjEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fn7LoBM5EeS6vNULDtnG3A" name="" source="_aZ0IABM5EeS6vNULDtnG3A" target="_uIyeMBKjEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gH0MoBM5EeS6vNULDtnG3A" name="" source="_aZ0IABM5EeS6vNULDtnG3A" target="_QuhucBM5EeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_kmglgBM5EeS6vNULDtnG3A" name="" source="_fwvakBKjEeS6vNULDtnG3A" target="_Vod_gBKiEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_lzvNoBM5EeS6vNULDtnG3A" name="" source="_QuhucBM5EeS6vNULDtnG3A" target="_jllUABM5EeS6vNULDtnG3A"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_VPOZEBKiEeS6vNULDtnG3A" name="Server" outgoing="_Bn0CsBKkEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_Vod_gBKiEeS6vNULDtnG3A" name="ActivityFinalNode" incoming="_kmglgBM5EeS6vNULDtnG3A"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_xXTeEBKiEeS6vNULDtnG3A" name="Client" outgoing="_IRnBMBKkEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_IQrpkBKjEeS6vNULDtnG3A" name="search for server" outgoing="_GqddMBKkEeS6vNULDtnG3A" incoming="_IRnBMBKkEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_IdqVoBKjEeS6vNULDtnG3A" name="Connect server" outgoing="_G-w5QBKkEeS6vNULDtnG3A" incoming="_GqddMBKkEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_fwvakBKjEeS6vNULDtnG3A" name="Receive welcoming message" outgoing="_kmglgBM5EeS6vNULDtnG3A" incoming="_G-w5QBKkEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_rsYtMBKjEeS6vNULDtnG3A" name="Launch server" outgoing="_CLrkwBKkEeS6vNULDtnG3A" incoming="_Bn0CsBKkEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_uIyeMBKjEeS6vNULDtnG3A" name="Wait for client" outgoing="_FBkMwBKkEeS6vNULDtnG3A" incoming="_fn7LoBM5EeS6vNULDtnG3A"/>
+    <node xmi:type="uml:SendSignalAction" xmi:id="_1zvXsBKjEeS6vNULDtnG3A" name="Send welcoming message" incoming="_FBkMwBKkEeS6vNULDtnG3A" signal="_42GVcBKjEeS6vNULDtnG3A">
+      <target xmi:type="uml:InputPin" xmi:id="_43JeUBKjEeS6vNULDtnG3A" name="Client">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_43JeURKjEeS6vNULDtnG3A" value="1"/>
+      </target>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_QuhucBM5EeS6vNULDtnG3A" name="StopServer" outgoing="_lzvNoBM5EeS6vNULDtnG3A" incoming="_gH0MoBM5EeS6vNULDtnG3A"/>
+    <node xmi:type="uml:ForkNode" xmi:id="_aZ0IABM5EeS6vNULDtnG3A" name="ForkNode" outgoing="_fn7LoBM5EeS6vNULDtnG3A _gH0MoBM5EeS6vNULDtnG3A" incoming="_CLrkwBKkEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_jllUABM5EeS6vNULDtnG3A" name="ActivityFinalNode1" incoming="_lzvNoBM5EeS6vNULDtnG3A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_cAwzwBKhEeS6vNULDtnG3A" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_j191cBKhEeS6vNULDtnG3A" name="Client">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3erhcBKhEeS6vNULDtnG3A" name="GUI">
+      <include xmi:type="uml:Include" xmi:id="__mjngBKhEeS6vNULDtnG3A" addition="_67VOgBKhEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_67VOgBKhEeS6vNULDtnG3A" name="LogField"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_nuJn8BKhEeS6vNULDtnG3A" name="User"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_vqfMYBKhEeS6vNULDtnG3A" name="Server">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_B5pEcBKiEeS6vNULDtnG3A" name="GUI">
+      <include xmi:type="uml:Include" xmi:id="_Gvs0cBKiEeS6vNULDtnG3A" addition="_FQRCABKiEeS6vNULDtnG3A"/>
+      <include xmi:type="uml:Include" xmi:id="_IzPZgBKiEeS6vNULDtnG3A" addition="_HHzycBKiEeS6vNULDtnG3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FQRCABKiEeS6vNULDtnG3A" name="StopButton"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_HHzycBKiEeS6vNULDtnG3A" name="LogField"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_zVKuYBKhEeS6vNULDtnG3A" name="Actor"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_44WDEBKhEeS6vNULDtnG3A" name="interact" memberEnd="_44WDERKhEeS6vNULDtnG3A _44WDFBKhEeS6vNULDtnG3A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_44WDERKhEeS6vNULDtnG3A" name="user" type="_nuJn8BKhEeS6vNULDtnG3A" association="_44WDEBKhEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_44WDEhKhEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_44WDExKhEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_44WDFBKhEeS6vNULDtnG3A" name="usecase" type="_3erhcBKhEeS6vNULDtnG3A" association="_44WDEBKhEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_44WDFRKhEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_44WDFhKhEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_J93ZkBKiEeS6vNULDtnG3A" name="interact" memberEnd="_J93ZkRKiEeS6vNULDtnG3A _J93ZlBKiEeS6vNULDtnG3A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_J93ZkRKiEeS6vNULDtnG3A" name="actor" type="_zVKuYBKhEeS6vNULDtnG3A" association="_J93ZkBKiEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J93ZkhKiEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J93ZkxKiEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_J93ZlBKiEeS6vNULDtnG3A" name="gui" type="_B5pEcBKiEeS6vNULDtnG3A" association="_J93ZkBKiEeS6vNULDtnG3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J93ZlRKiEeS6vNULDtnG3A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J93ZlhKiEeS6vNULDtnG3A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_42GVcBKjEeS6vNULDtnG3A" name="Send welcoming message"/>
+</uml:Model>
