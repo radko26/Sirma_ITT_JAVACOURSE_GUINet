@@ -11,6 +11,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.concurrent.ExecutionException;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingWorker;
 
@@ -27,6 +28,8 @@ public class DownloadAgent extends SwingWorker<BigDecimal, Void> {
 	private String fileSavePath;
 	private int totalBytes = -1;
 	private JLabel errorLog;
+	private InputStream input;
+	private JButton saveButton;
 
 	/**
 	 * Initialises resources that will be used for downloading the file.
@@ -39,10 +42,12 @@ public class DownloadAgent extends SwingWorker<BigDecimal, Void> {
 	 *            The GUI component that will display any errors.
 	 * @param saveButton
 	 */
-	public DownloadAgent(String sourceURL, String fileSavePath, JLabel errorLog) {
+	public DownloadAgent(String sourceURL, String fileSavePath,
+			JLabel errorLog, JButton saveButton) {
 		this.sourceURL = sourceURL;
 		this.fileSavePath = fileSavePath;
 		this.errorLog = errorLog;
+		this.saveButton = saveButton;
 	}
 
 	/**
@@ -72,7 +77,7 @@ public class DownloadAgent extends SwingWorker<BigDecimal, Void> {
 		}
 		BigDecimal length = new BigDecimal(Long.toString(connection
 				.getContentLengthLong()));
-		InputStream input;
+
 		try {
 			input = connection.getInputStream();
 		} catch (IOException e) {
@@ -99,6 +104,7 @@ public class DownloadAgent extends SwingWorker<BigDecimal, Void> {
 		try {
 			downloadFile(sourceURL);
 		} catch (Exception e) {
+
 			throw new IOException(e.getMessage());
 		}
 		return new BigDecimal(totalBytes);
@@ -111,6 +117,8 @@ public class DownloadAgent extends SwingWorker<BigDecimal, Void> {
 			errorLog.setText("Completed");
 		} catch (InterruptedException | ExecutionException e) {
 			errorLog.setText(e.getMessage());
+		} finally {
+			saveButton.setEnabled(true);
 		}
 
 	}

@@ -90,7 +90,7 @@ public class DownloadAgentGUI extends JFrame {
 	 */
 	private void useDownloadAgent(String sourceURL, String fileSavePath) {
 		DownloadAgent agent = new DownloadAgent(sourceURL, fileSavePath,
-				errorLog);
+				errorLog, saveButton);
 		agent.addPropertyChangeListener(new PropertyChangeListener() {
 
 			@Override
@@ -99,11 +99,12 @@ public class DownloadAgentGUI extends JFrame {
 					int progress = (int) evt.getNewValue();
 					progressBar.setValue(progress);
 					if (progress == 100) {
-						saveButton.setEnabled(true);
+
 					}
 				}
 			}
 		});
+
 		agent.execute();
 	}
 

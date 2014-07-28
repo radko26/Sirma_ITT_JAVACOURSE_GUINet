@@ -110,15 +110,6 @@
           <element xmi:type="uml:ActivityFinalNode" href="model2.uml#_jllUABM5EeS6vNULDtnG3A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jlo-YhM5EeS6vNULDtnG3A" x="339" y="427"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_GrJFkBUIEeS6-rCnbWdkdg" type="3071">
-          <children xmi:type="notation:DecorationNode" xmi:id="_GrJFkxUIEeS6-rCnbWdkdg" type="5121"/>
-          <children xmi:type="notation:DecorationNode" xmi:id="_GrJsoBUIEeS6-rCnbWdkdg" type="7010">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrJsoRUIEeS6-rCnbWdkdg"/>
-          </children>
-          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_GrJFkRUIEeS6-rCnbWdkdg"/>
-          <element xmi:type="uml:LoopNode" href="model2.uml#_GrHQYBUIEeS6-rCnbWdkdg"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrJFkhUIEeS6-rCnbWdkdg" x="193" y="511"/>
-        </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cAu-oRKhEeS6vNULDtnG3A"/>
       </children>
       <element xmi:type="uml:Activity" href="model2.uml#_cAtwcBKhEeS6vNULDtnG3A"/>

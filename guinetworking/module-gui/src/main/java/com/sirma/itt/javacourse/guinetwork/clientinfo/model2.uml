@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_cAsiUBKhEeS6vNULDtnG3A" name="model">
-  <packagedElement xmi:type="uml:Activity" xmi:id="_cAtwcBKhEeS6vNULDtnG3A" name="Activity1" isActive="true" group="_GrHQYBUIEeS6-rCnbWdkdg" isReadOnly="true" isSingleExecution="true" node="_VPOZEBKiEeS6vNULDtnG3A _Vod_gBKiEeS6vNULDtnG3A _xXTeEBKiEeS6vNULDtnG3A _IQrpkBKjEeS6vNULDtnG3A _IdqVoBKjEeS6vNULDtnG3A _fwvakBKjEeS6vNULDtnG3A _rsYtMBKjEeS6vNULDtnG3A _uIyeMBKjEeS6vNULDtnG3A _1zvXsBKjEeS6vNULDtnG3A _QuhucBM5EeS6vNULDtnG3A _aZ0IABM5EeS6vNULDtnG3A _jllUABM5EeS6vNULDtnG3A">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_cAtwcBKhEeS6vNULDtnG3A" name="Activity1" node="_VPOZEBKiEeS6vNULDtnG3A _Vod_gBKiEeS6vNULDtnG3A _xXTeEBKiEeS6vNULDtnG3A _IQrpkBKjEeS6vNULDtnG3A _IdqVoBKjEeS6vNULDtnG3A _fwvakBKjEeS6vNULDtnG3A _rsYtMBKjEeS6vNULDtnG3A _uIyeMBKjEeS6vNULDtnG3A _1zvXsBKjEeS6vNULDtnG3A _QuhucBM5EeS6vNULDtnG3A _aZ0IABM5EeS6vNULDtnG3A _jllUABM5EeS6vNULDtnG3A">
     <edge xmi:type="uml:ControlFlow" xmi:id="_Bn0CsBKkEeS6vNULDtnG3A" name="" source="_VPOZEBKiEeS6vNULDtnG3A" target="_rsYtMBKjEeS6vNULDtnG3A"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_CLrkwBKkEeS6vNULDtnG3A" name="" source="_rsYtMBKjEeS6vNULDtnG3A" target="_aZ0IABM5EeS6vNULDtnG3A"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_FBkMwBKkEeS6vNULDtnG3A" name="" source="_uIyeMBKjEeS6vNULDtnG3A" target="_1zvXsBKjEeS6vNULDtnG3A"/>
@@ -11,8 +11,6 @@
     <edge xmi:type="uml:ControlFlow" xmi:id="_gH0MoBM5EeS6vNULDtnG3A" name="" source="_aZ0IABM5EeS6vNULDtnG3A" target="_QuhucBM5EeS6vNULDtnG3A"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_kmglgBM5EeS6vNULDtnG3A" name="" source="_fwvakBKjEeS6vNULDtnG3A" target="_Vod_gBKiEeS6vNULDtnG3A"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_lzvNoBM5EeS6vNULDtnG3A" name="" source="_QuhucBM5EeS6vNULDtnG3A" target="_jllUABM5EeS6vNULDtnG3A"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_m3obABTjEeS6-rCnbWdkdg" name=""/>
-    <group xmi:type="uml:LoopNode" xmi:id="_GrHQYBUIEeS6-rCnbWdkdg" name="ThreadNotifier"/>
     <node xmi:type="uml:InitialNode" xmi:id="_VPOZEBKiEeS6vNULDtnG3A" name="Server" outgoing="_Bn0CsBKkEeS6vNULDtnG3A"/>
     <node xmi:type="uml:ActivityFinalNode" xmi:id="_Vod_gBKiEeS6vNULDtnG3A" name="ActivityFinalNode" incoming="_kmglgBM5EeS6vNULDtnG3A"/>
     <node xmi:type="uml:InitialNode" xmi:id="_xXTeEBKiEeS6vNULDtnG3A" name="Client" outgoing="_IRnBMBKkEeS6vNULDtnG3A"/>

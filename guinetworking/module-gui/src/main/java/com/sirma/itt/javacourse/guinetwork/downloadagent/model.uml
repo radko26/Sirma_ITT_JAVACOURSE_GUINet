@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_rH6Z4BJxEeS6vNULDtnG3A" name="model">
-  <packagedElement xmi:type="uml:Activity" xmi:id="_rH7oABJxEeS6vNULDtnG3A" name="d" node="_4r3KcBKaEeS6vNULDtnG3A _BZsgcBKfEeS6vNULDtnG3A _ByLR4BKfEeS6vNULDtnG3A _B-nLYBKfEeS6vNULDtnG3A _CJciYBKfEeS6vNULDtnG3A _X6udYBKfEeS6vNULDtnG3A _6VfBYBKfEeS6vNULDtnG3A _OQ0ucBKgEeS6vNULDtnG3A">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_rH7oABJxEeS6vNULDtnG3A" name="d" group="_PBxPYBSyEeS6-rCnbWdkdg _S7ZMUBSyEeS6-rCnbWdkdg _VAdbYBSyEeS6-rCnbWdkdg" node="_4r3KcBKaEeS6vNULDtnG3A _BZsgcBKfEeS6vNULDtnG3A _ByLR4BKfEeS6vNULDtnG3A _B-nLYBKfEeS6vNULDtnG3A _CJciYBKfEeS6vNULDtnG3A _X6udYBKfEeS6vNULDtnG3A _6VfBYBKfEeS6vNULDtnG3A">
     <edge xmi:type="uml:ControlFlow" xmi:id="_yLolYBKfEeS6vNULDtnG3A" name="" source="_4r3KcBKaEeS6vNULDtnG3A" target="_ByLR4BKfEeS6vNULDtnG3A"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="__lvaEBKfEeS6vNULDtnG3A" name="" source="_X6udYBKfEeS6vNULDtnG3A" target="_6VfBYBKfEeS6vNULDtnG3A"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_A6C6kBKgEeS6vNULDtnG3A" name="" source="_6VfBYBKfEeS6vNULDtnG3A" target="_B-nLYBKfEeS6vNULDtnG3A"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Qvr9kBKgEeS6vNULDtnG3A" name="" source="_CJciYBKfEeS6vNULDtnG3A" target="_OQ0ucBKgEeS6vNULDtnG3A"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_ZbPYcBKgEeS6vNULDtnG3A" name="" source="_B-nLYBKfEeS6vNULDtnG3A" target="_OQ0ucBKgEeS6vNULDtnG3A"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_yhjVkBKgEeS6vNULDtnG3A" name="" source="_OQ0ucBKgEeS6vNULDtnG3A" target="_BZsgcBKfEeS6vNULDtnG3A"/>
-    <node xmi:type="uml:InitialNode" xmi:id="_4r3KcBKaEeS6vNULDtnG3A" name="Start" outgoing="_yLolYBKfEeS6vNULDtnG3A"/>
-    <node xmi:type="uml:ActivityFinalNode" xmi:id="_BZsgcBKfEeS6vNULDtnG3A" name="ActivityFinalNode" incoming="_yhjVkBKgEeS6vNULDtnG3A"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_ByLR4BKfEeS6vNULDtnG3A" name="Receive URL" incoming="_yLolYBKfEeS6vNULDtnG3A">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ZbPYcBKgEeS6vNULDtnG3A" name="" source="_B-nLYBKfEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yhjVkBKgEeS6vNULDtnG3A" name="" target="_BZsgcBKfEeS6vNULDtnG3A"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_8MbEkBSyEeS6-rCnbWdkdg" name="" source="_B-nLYBKfEeS6vNULDtnG3A" target="_BZsgcBKfEeS6vNULDtnG3A"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_PBxPYBSyEeS6-rCnbWdkdg" name="Customer" node="_ByLR4BKfEeS6vNULDtnG3A _4r3KcBKaEeS6vNULDtnG3A"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_S7ZMUBSyEeS6-rCnbWdkdg" name="GUI" node="_CJciYBKfEeS6vNULDtnG3A"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_VAdbYBSyEeS6-rCnbWdkdg" name="Agent" node="_6VfBYBKfEeS6vNULDtnG3A _X6udYBKfEeS6vNULDtnG3A _B-nLYBKfEeS6vNULDtnG3A _BZsgcBKfEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_4r3KcBKaEeS6vNULDtnG3A" name="Start" inPartition="_PBxPYBSyEeS6-rCnbWdkdg" outgoing="_yLolYBKfEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_BZsgcBKfEeS6vNULDtnG3A" name="ActivityFinalNode" inPartition="_VAdbYBSyEeS6-rCnbWdkdg" incoming="_yhjVkBKgEeS6vNULDtnG3A _8MbEkBSyEeS6-rCnbWdkdg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ByLR4BKfEeS6vNULDtnG3A" name="Receive URL" inPartition="_PBxPYBSyEeS6-rCnbWdkdg" incoming="_yLolYBKfEeS6vNULDtnG3A">
       <handler xmi:type="uml:ExceptionHandler" xmi:id="_w8n0kBKfEeS6vNULDtnG3A"/>
     </node>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_B-nLYBKfEeS6vNULDtnG3A" name="Close Streams" outgoing="_ZbPYcBKgEeS6vNULDtnG3A" incoming="_A6C6kBKgEeS6vNULDtnG3A"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_CJciYBKfEeS6vNULDtnG3A" name="Print error" outgoing="_Qvr9kBKgEeS6vNULDtnG3A"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_X6udYBKfEeS6vNULDtnG3A" name="Connect to URL" outgoing="__lvaEBKfEeS6vNULDtnG3A"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_6VfBYBKfEeS6vNULDtnG3A" name="Create file and copy content" outgoing="_A6C6kBKgEeS6vNULDtnG3A" incoming="__lvaEBKfEeS6vNULDtnG3A"/>
-    <node xmi:type="uml:MergeNode" xmi:id="_OQ0ucBKgEeS6vNULDtnG3A" name="MergeNode" outgoing="_yhjVkBKgEeS6vNULDtnG3A" incoming="_Qvr9kBKgEeS6vNULDtnG3A _ZbPYcBKgEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_B-nLYBKfEeS6vNULDtnG3A" name="Close Streams" inPartition="_VAdbYBSyEeS6-rCnbWdkdg" outgoing="_ZbPYcBKgEeS6vNULDtnG3A _8MbEkBSyEeS6-rCnbWdkdg" incoming="_A6C6kBKgEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_CJciYBKfEeS6vNULDtnG3A" name="Print error" inPartition="_S7ZMUBSyEeS6-rCnbWdkdg">
+      <inputValue xmi:type="uml:InputPin" xmi:id="_2rHM8BUGEeS6-rCnbWdkdg" name="">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_2rH0ABUGEeS6-rCnbWdkdg" value="1"/>
+      </inputValue>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_X6udYBKfEeS6vNULDtnG3A" name="Connect to URL" inPartition="_VAdbYBSyEeS6-rCnbWdkdg" outgoing="__lvaEBKfEeS6vNULDtnG3A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6VfBYBKfEeS6vNULDtnG3A" name="Create file and copy content" inPartition="_VAdbYBSyEeS6-rCnbWdkdg" outgoing="_A6C6kBKgEeS6vNULDtnG3A" incoming="__lvaEBKfEeS6vNULDtnG3A"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_stCkoBJxEeS6vNULDtnG3A" name="DownloadAgent">
     <packagedElement xmi:type="uml:UseCase" xmi:id="_v4gbEBJxEeS6vNULDtnG3A" name="GUI">
