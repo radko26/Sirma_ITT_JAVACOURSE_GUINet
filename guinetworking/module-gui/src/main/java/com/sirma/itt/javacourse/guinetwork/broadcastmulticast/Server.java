@@ -18,7 +18,7 @@ public class Server {
 	public static void main(String[] args) throws IOException {
 
 		BlockingQueue<News> listOfNews = new ArrayBlockingQueue<News>(10);
-		new TextGeneratorThread(listOfNews).start();
+		new NewsGeneratorThread(listOfNews).start();
 		new ServerThread("Server", running, listOfNews).start();
 	}
 }

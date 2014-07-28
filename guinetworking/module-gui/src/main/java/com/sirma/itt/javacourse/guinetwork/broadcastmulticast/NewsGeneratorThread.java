@@ -9,11 +9,11 @@ import java.util.concurrent.BlockingQueue;
  * 
  * @author Radoslav
  */
-public class TextGeneratorThread extends Thread {
+public class NewsGeneratorThread extends Thread {
 
 	private final BlockingQueue<News> listOfNews;
 
-	public TextGeneratorThread(BlockingQueue<News> listOfNews) {
+	public NewsGeneratorThread(BlockingQueue<News> listOfNews) {
 		this.listOfNews = listOfNews;
 	}
 

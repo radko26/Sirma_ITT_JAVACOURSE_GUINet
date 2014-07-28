@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_vmffEBaEEeSeiI8CfDEfzQ" name="model">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_vmkXkBaEEeSeiI8CfDEfzQ" name="Activity1" group="_xTW2QBaUEeSeiI8CfDEfzQ _BsZhQBaVEeSeiI8CfDEfzQ _xoBXUBaXEeSeiI8CfDEfzQ _XiBCUBaYEeSeiI8CfDEfzQ" node="_WAitsBaGEeSeiI8CfDEfzQ _XEv8sBaGEeSeiI8CfDEfzQ _gtuTABaPEeSeiI8CfDEfzQ _g_IMEBaPEeSeiI8CfDEfzQ _3wCioBaQEeSeiI8CfDEfzQ _XuUD0BaWEeSeiI8CfDEfzQ _emEl0BaWEeSeiI8CfDEfzQ _bpxXUBaXEeSeiI8CfDEfzQ _sGPw0BaXEeSeiI8CfDEfzQ">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6QHSsBaQEeSeiI8CfDEfzQ" name="" source="_WAitsBaGEeSeiI8CfDEfzQ" target="_3wCioBaQEeSeiI8CfDEfzQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_8NFVsBaQEeSeiI8CfDEfzQ" name="" source="_3wCioBaQEeSeiI8CfDEfzQ" target="_gtuTABaPEeSeiI8CfDEfzQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_9RbuoBaQEeSeiI8CfDEfzQ" name="" source="_3wCioBaQEeSeiI8CfDEfzQ" target="_g_IMEBaPEeSeiI8CfDEfzQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ZV77MBaREeSeiI8CfDEfzQ" name="" source="_g_IMEBaPEeSeiI8CfDEfzQ" target="_XiBCUBaYEeSeiI8CfDEfzQ"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_upibsBaREeSeiI8CfDEfzQ" name="" source="_oRCBgBaREeSeiI8CfDEfzQ" target="_qfyYEBaREeSeiI8CfDEfzQ">
+      <guard xmi:type="uml:Expression" xmi:id="_K5KkEBabEeSeiI8CfDEfzQ" name="News" symbol="N"/>
+      <weight xmi:type="uml:Expression" xmi:id="_OlGDQBabEeSeiI8CfDEfzQ"/>
+    </edge>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_AThfQBaUEeSeiI8CfDEfzQ" name="" source="_-4j9IBaTEeSeiI8CfDEfzQ" target="_2hp1MBaWEeSeiI8CfDEfzQ">
+      <guard xmi:type="uml:Expression" xmi:id="_JOa5gBabEeSeiI8CfDEfzQ" name="News" symbol="N"/>
+      <weight xmi:type="uml:Expression" xmi:id="_PSZOIBabEeSeiI8CfDEfzQ"/>
+    </edge>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_EdQNYBaXEeSeiI8CfDEfzQ" name="" source="_BiUtUBaXEeSeiI8CfDEfzQ" target="_9oPkwBaTEeSeiI8CfDEfzQ">
+      <guard xmi:type="uml:Expression" xmi:id="_MSRFABabEeSeiI8CfDEfzQ" name="News" symbol="N"/>
+      <weight xmi:type="uml:Expression" xmi:id="_NwbsIBabEeSeiI8CfDEfzQ"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_rF5uIBaXEeSeiI8CfDEfzQ" name="" source="_XuUD0BaWEeSeiI8CfDEfzQ" target="_bpxXUBaXEeSeiI8CfDEfzQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_CttF4BaYEeSeiI8CfDEfzQ" name="" source="_xoBXUBaXEeSeiI8CfDEfzQ" target="_XEv8sBaGEeSeiI8CfDEfzQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FuCDUBaYEeSeiI8CfDEfzQ" name="" source="_bpxXUBaXEeSeiI8CfDEfzQ" target="_sGPw0BaXEeSeiI8CfDEfzQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_H9VMcBaYEeSeiI8CfDEfzQ" name="" source="_sGPw0BaXEeSeiI8CfDEfzQ" target="_xoBXUBaXEeSeiI8CfDEfzQ"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_xTW2QBaUEeSeiI8CfDEfzQ" name="Client" node="_xoBXUBaXEeSeiI8CfDEfzQ _sGPw0BaXEeSeiI8CfDEfzQ _XuUD0BaWEeSeiI8CfDEfzQ _XEv8sBaGEeSeiI8CfDEfzQ _bpxXUBaXEeSeiI8CfDEfzQ"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_BsZhQBaVEeSeiI8CfDEfzQ" name="Server Launcher" node="_3wCioBaQEeSeiI8CfDEfzQ _WAitsBaGEeSeiI8CfDEfzQ">
+      <subpartition xmi:type="uml:ActivityPartition" xmi:id="_j4SKgBaPEeSeiI8CfDEfzQ" name="Server"/>
+      <subpartition xmi:type="uml:ActivityPartition" xmi:id="_q55H4BaWEeSeiI8CfDEfzQ" name="Mediator"/>
+      <subpartition xmi:type="uml:ActivityPartition" xmi:id="_p9AGABaPEeSeiI8CfDEfzQ" name="News Generation"/>
+    </group>
+    <group xmi:type="uml:LoopNode" xmi:id="_xoBXUBaXEeSeiI8CfDEfzQ" name="LoopNode" inPartition="_xTW2QBaUEeSeiI8CfDEfzQ" outgoing="_CttF4BaYEeSeiI8CfDEfzQ" incoming="_H9VMcBaYEeSeiI8CfDEfzQ">
+      <node xmi:type="uml:AcceptEventAction" xmi:id="_yXPNwBaXEeSeiI8CfDEfzQ" name="Recieve news"/>
+    </group>
+    <group xmi:type="uml:LoopNode" xmi:id="_XiBCUBaYEeSeiI8CfDEfzQ" name="LoopNode1" incoming="_ZV77MBaREeSeiI8CfDEfzQ">
+      <node xmi:type="uml:SendSignalAction" xmi:id="_7TKOoBaREeSeiI8CfDEfzQ" name="Broadcast it to the group">
+        <argument xmi:type="uml:InputPin" xmi:id="_9oPkwBaTEeSeiI8CfDEfzQ" name="" incoming="_EdQNYBaXEeSeiI8CfDEfzQ">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_9oQL0BaTEeSeiI8CfDEfzQ" value="1"/>
+        </argument>
+      </node>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_hP1hkBaPEeSeiI8CfDEfzQ" name="Take a piece of news">
+        <inputValue xmi:type="uml:InputPin" xmi:id="_qfyYEBaREeSeiI8CfDEfzQ" name="" incoming="_upibsBaREeSeiI8CfDEfzQ">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_qf00UBaREeSeiI8CfDEfzQ" value="1"/>
+        </inputValue>
+        <outputValue xmi:type="uml:OutputPin" xmi:id="_-4j9IBaTEeSeiI8CfDEfzQ" name="" outgoing="_AThfQBaUEeSeiI8CfDEfzQ">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_-4kkMBaTEeSeiI8CfDEfzQ" value="1"/>
+        </outputValue>
+      </node>
+    </group>
+    <node xmi:type="uml:InitialNode" xmi:id="_WAitsBaGEeSeiI8CfDEfzQ" name="InitialNode" inPartition="_BsZhQBaVEeSeiI8CfDEfzQ" outgoing="_6QHSsBaQEeSeiI8CfDEfzQ"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_XEv8sBaGEeSeiI8CfDEfzQ" name="ActivityFinalNode" inPartition="_xTW2QBaUEeSeiI8CfDEfzQ" incoming="_CttF4BaYEeSeiI8CfDEfzQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_gtuTABaPEeSeiI8CfDEfzQ" name="Generate News" incoming="_8NFVsBaQEeSeiI8CfDEfzQ">
+      <outputValue xmi:type="uml:OutputPin" xmi:id="_oRCBgBaREeSeiI8CfDEfzQ" name="" outgoing="_upibsBaREeSeiI8CfDEfzQ">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_oRCokBaREeSeiI8CfDEfzQ" value="1"/>
+      </outputValue>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_g_IMEBaPEeSeiI8CfDEfzQ" name="Start Server" outgoing="_ZV77MBaREeSeiI8CfDEfzQ" incoming="_9RbuoBaQEeSeiI8CfDEfzQ"/>
+    <node xmi:type="uml:ForkNode" xmi:id="_3wCioBaQEeSeiI8CfDEfzQ" name="ForkNode" inPartition="_BsZhQBaVEeSeiI8CfDEfzQ" outgoing="_8NFVsBaQEeSeiI8CfDEfzQ _9RbuoBaQEeSeiI8CfDEfzQ" incoming="_6QHSsBaQEeSeiI8CfDEfzQ"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_XuUD0BaWEeSeiI8CfDEfzQ" name="InitialNode1" inPartition="_xTW2QBaUEeSeiI8CfDEfzQ" outgoing="_rF5uIBaXEeSeiI8CfDEfzQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_emEl0BaWEeSeiI8CfDEfzQ" name="Choose where to broadcast it">
+      <inputValue xmi:type="uml:InputPin" xmi:id="_2hp1MBaWEeSeiI8CfDEfzQ" name="" incoming="_AThfQBaUEeSeiI8CfDEfzQ">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_2hqcQBaWEeSeiI8CfDEfzQ" value="1"/>
+      </inputValue>
+      <outputValue xmi:type="uml:OutputPin" xmi:id="_BiUtUBaXEeSeiI8CfDEfzQ" name="" outgoing="_EdQNYBaXEeSeiI8CfDEfzQ">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_BiVUYBaXEeSeiI8CfDEfzQ" value="1"/>
+      </outputValue>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_bpxXUBaXEeSeiI8CfDEfzQ" name="Choose broadcast group" inPartition="_xTW2QBaUEeSeiI8CfDEfzQ" outgoing="_FuCDUBaYEeSeiI8CfDEfzQ" incoming="_rF5uIBaXEeSeiI8CfDEfzQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_sGPw0BaXEeSeiI8CfDEfzQ" name="Connect and start listening" inPartition="_xTW2QBaUEeSeiI8CfDEfzQ" outgoing="_H9VMcBaYEeSeiI8CfDEfzQ" incoming="_FuCDUBaYEeSeiI8CfDEfzQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_vmna4BaEEeSeiI8CfDEfzQ" name="Sequence">
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pJFr4BaGEeSeiI8CfDEfzQ" name="MessageSend0" covered="_dN8vkBaGEeSeiI8CfDEfzQ" message="_pJEdwBaGEeSeiI8CfDEfzQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pJGS8BaGEeSeiI8CfDEfzQ" name="MessageRecv0" covered="_c_h5EBaGEeSeiI8CfDEfzQ" message="_pJEdwBaGEeSeiI8CfDEfzQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fPTjUBaGEeSeiI8CfDEfzQ" name="MessageSend" covered="_c_h5EBaGEeSeiI8CfDEfzQ" message="_fPS8QBaGEeSeiI8CfDEfzQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fPUKYBaGEeSeiI8CfDEfzQ" name="MessageRecv" covered="_dN8vkBaGEeSeiI8CfDEfzQ" message="_fPS8QBaGEeSeiI8CfDEfzQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_c_h5EBaGEeSeiI8CfDEfzQ" name="Server" coveredBy="_fPTjUBaGEeSeiI8CfDEfzQ _pJGS8BaGEeSeiI8CfDEfzQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_dN8vkBaGEeSeiI8CfDEfzQ" name="Client" coveredBy="_fPUKYBaGEeSeiI8CfDEfzQ _pJFr4BaGEeSeiI8CfDEfzQ"/>
+    <message xmi:type="uml:Message" xmi:id="_fPS8QBaGEeSeiI8CfDEfzQ" name="Broadcast data" messageSort="asynchCall" receiveEvent="_fPUKYBaGEeSeiI8CfDEfzQ" sendEvent="_fPTjUBaGEeSeiI8CfDEfzQ"/>
+    <message xmi:type="uml:Message" xmi:id="_pJEdwBaGEeSeiI8CfDEfzQ" name="join group" messageSort="asynchCall" receiveEvent="_pJGS8BaGEeSeiI8CfDEfzQ" sendEvent="_pJFr4BaGEeSeiI8CfDEfzQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_2I9GgBaEEeSeiI8CfDEfzQ" name="Actor"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_2h1gkBaEEeSeiI8CfDEfzQ" name="Client">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_LC7woBaGEeSeiI8CfDEfzQ" name="News"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Q58nUBaGEeSeiI8CfDEfzQ" name="read" memberEnd="_Q58nURaGEeSeiI8CfDEfzQ _Q58nVBaGEeSeiI8CfDEfzQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Q58nURaGEeSeiI8CfDEfzQ" name="actor" type="_2I9GgBaEEeSeiI8CfDEfzQ" association="_Q58nUBaGEeSeiI8CfDEfzQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q58nUhaGEeSeiI8CfDEfzQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q58nUxaGEeSeiI8CfDEfzQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Q58nVBaGEeSeiI8CfDEfzQ" name="news" type="_LC7woBaGEeSeiI8CfDEfzQ" association="_Q58nUBaGEeSeiI8CfDEfzQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q58nVRaGEeSeiI8CfDEfzQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q58nVhaGEeSeiI8CfDEfzQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
