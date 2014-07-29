@@ -29,7 +29,7 @@ public class Client {
 	 */
 	public static void main(String[] args) throws IOException {
 		Scanner scan = new Scanner(System.in);
-		int channel = scan.nextInt();// TODO
+		int channel = scan.nextInt();
 		scan.close();
 		LOG.info("client started");
 		if (channel == 1) {
@@ -39,7 +39,7 @@ public class Client {
 			groupAdress = InetAddress.getByName("230.0.0.2");
 		}
 		try {
-			socket = new MulticastSocket(4446);
+			socket = new MulticastSocket(7001);
 		} catch (SocketException e) {
 			throw new SocketException("Socket initialisation error");
 		}

@@ -42,7 +42,7 @@ public class ServerThread extends Thread {
 	public ServerThread(String name, AtomicBoolean running,
 			BlockingQueue<News> listOfNews) throws IOException {
 		super(name);
-		server = new DatagramSocket(4445);
+		server = new DatagramSocket(7000);
 		this.listOfNews = listOfNews;
 
 		this.running = running;
@@ -71,7 +71,7 @@ public class ServerThread extends Thread {
 			}
 
 			DatagramPacket serverPacket = new DatagramPacket(buffer,
-					buffer.length, groupAddress, 4446);// TODO RENAME
+					buffer.length, groupAddress, 7001);// TODO RENAME
 			try {
 				server.send(serverPacket);
 			} catch (IOException e) {
